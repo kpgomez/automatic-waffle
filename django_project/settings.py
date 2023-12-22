@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     # Local
     "accounts",
-    "pages",
+    # "pages",
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
@@ -178,3 +178,9 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+# from class demo
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
